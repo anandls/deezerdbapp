@@ -15,8 +15,8 @@
         "server:build": "npm run build --prefix server",
         "clientserver": "nodemon client/clientserver/server.js",
         "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
-        "server": "concurrently \"npm run clientserver\" \"npm run server:dev\"",
-        "heroku-postbuild": "cd client && npm install && npm run build && cd clientserver && npm run install && cd ../../ && cd server && npm run install && cd .. && server"
+        "serve": "concurrently \"npm run clientserver\" \"npm run server:dev\"",
+        "heroku-postbuild": "npm install && cd client && npm install && npm run build && cd clientserver && npm run install && cd ../../ && cd server && npm run install && cd .. && server"
     },
     "dependencies": {
         "concurrently": "^6.0.2",
