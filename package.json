@@ -16,7 +16,7 @@
         "clientserver": "nodemon client/clientserver/server.js",
         "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
         "serve": "concurrently \"npm run clientserver\" \"npm run server:dev\"",
-        "heroku-postbuild": "yarn && cd client && yarn && yarn run build && cd clientserver && yarn && cd ../../ && cd server && yarn && cd.."
+        "heroku-postbuild": "yarn && cd client && yarn && yarn run build && cd clientserver && yarn && cd ../../ && cd server && yarn"
     },
     "dependencies": {
         "concurrently": "^6.0.2",
