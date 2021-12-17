@@ -59,4 +59,4 @@ Please clone the repo to your machine
 7. `npm run serve` to start the server and client app
 8. Point your browser to `http://localhost:8080` to open the app
 
-.env file is include/not ignored, for convenience
+.env file is added/not ignored, for convenience
