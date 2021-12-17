@@ -1,4 +1,4 @@
-# Frontend & Server app - Consume Deezer music API
+## Frontend & Server app - Consume Deezer music API
 
 - The solution consists of a front end React app (CRA) and a basic Node (with Express) application that fetches data from the Deezer API.
 
@@ -18,26 +18,30 @@
 
 The project consists of the structure below, for the main components:
 
-```.
-    client
-        src            
-            ├── pages    
-            ├── components
-                    | └── Artist
-                    |_____Tracks
-            ├── api
-            ├── styles
-            ├── constants
-        App.jsx
-    server
-        src    
-            ├── Tracks
-                  └── controllers
-                        |   |____artists.ts
-                        |____search.ts            
-            ├── constants
-        index.ts
-    README.md
+```
+    root
+        client
+            src            
+                ├── pages    
+                ├── components
+                        | └── Artist
+                        |_____Tracks
+                ├── api
+                ├── styles
+                ├── constants
+                App.jsx
+        clientserver
+                
+        server
+            src    
+                ├── Tracks
+                    └── controllers
+                            |   |____artists.ts
+                            |____search.ts            
+                ├── constants
+            index.ts
+        README.md
+        package.json
     package.json
 ```
 
