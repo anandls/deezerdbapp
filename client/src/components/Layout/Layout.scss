@@ -1,0 +1,53 @@
+@import "@styles/base/colors.scss";
+
+@function vh($quantity) {
+    @return calc(var(--vh, 1vh) * #{$quantity});
+}
+
+.App {
+    background: $bg;
+    display: grid;
+    height: 100%;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    grid-template-columns: 0fr 1fr 1fr 1fr;
+    grid-template-rows: 0.7fr 6.5fr 0fr 0fr;
+    grid-template-areas:
+        "sidebar main main main"
+        "sidebar footer footer footer";
+    grid-gap: 0rem;
+    padding: 0;
+}
+
+.sidebar {
+    background: $shadow-color;
+    color: $white;
+    grid-area: sidebar;
+    padding: 25px;
+    margin: 0;
+    font-size: 24px;
+    position: sticky;
+    cursor: pointer;
+}
+
+main {
+    // width: 80%;
+    background: $bg;
+    grid-area: main;
+    //border-radius: var(--main-radius);
+    // padding-top: var(--main-padding);
+    padding: 0;
+    // margin: 60px auto;
+    margin: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    .App {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+        grid-template-areas:
+            "sidebar"
+            "main";
+        // 'content';
+    }
+}

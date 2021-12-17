@@ -1,0 +1,157 @@
+@import "@styles/base/variables.scss";
+@import "@styles/base/colors.scss";
+@import "@styles/base/typography.scss";
+
+$border-radius: 0.8em;
+
+.loading {
+    display: flex;
+    font-size: 60px;
+    color: $dark;
+    place-items: center;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.search {
+    display: flex;
+    width: 400px;
+    height: 50px;
+    padding: 10px;
+
+    .search_span {
+        width: 15%;
+        border: 1px solid $dark;
+        background: $dark;
+        padding-top: 4px;
+        text-align: center;
+        color: #fff;
+        border-radius: 5px 0 0 5px;
+        font-size: 24px;
+        padding: 8px;
+    }
+
+    .search_input {
+        width: 85%;
+        border: 3px solid $dark;
+        border-left: none;
+        padding: 5px;
+        border-radius: 0 5px 5px 0;
+        outline: none;
+        font-size: $fs-base;
+    }
+
+    .search_icon {
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .search {
+        width: 95%;
+    }
+}
+
+.search_header {
+    width: 96%;
+    position: fixed;
+    height: 90px;
+    background-color: $lighter-gray;
+    margin-left: 10px;
+    padding: 0px;
+    border-radius: $border-radius;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards {
+    max-width: 75%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 1em;
+    transition: all 350ms ease-out;
+    margin-top: 7%;
+    margin-bottom: 40px;
+    place-items: center;
+    min-height: 100vh;
+
+    .card {
+        color: $dark;
+        width: 20em;
+        margin-bottom: 15px;
+
+        img {
+            width: 20em;
+            border-top-left-radius: $border-radius;
+            border-top-right-radius: $border-radius;
+        }
+
+        :hover img {
+            -webkit-filter: blur(1px); /* Chrome, Safari, Opera */
+            filter: blur(0.5px);
+            transition: all 0.2s ease;
+        }
+
+        .card_content {
+            padding: 16px;
+            background: $white;
+            border-bottom-left-radius: $border-radius;
+            border-bottom-right-radius: $border-radius;
+        }
+
+        .card_track_title {
+            font-size: $fw-medium;
+            font-weight: $fw-semibold;
+            letter-spacing: 1px;
+            line-height: 24px;
+            text-transform: capitalize;
+            margin: 0px;
+
+            width: 15em;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            float: left;
+        }
+
+        .card_track_duration {
+            float: right;
+        }
+
+        .card_artist_name {
+            font-size: $fs-sm;
+            letter-spacing: 1px;
+            line-height: 24px;
+            text-transform: capitalize;
+            margin: 0px;
+            clear: both;
+        }
+
+        .card_track_album {
+            font-size: $fs-sm;
+            font-weight: $fw-semibold;
+            letter-spacing: 1px;
+            line-height: 24px;
+            text-transform: capitalize;
+            margin: 0px;
+            clear: both;
+        }
+    }
+
+    .card:hover {
+        transform: translateY(-12px);
+        transition: all 0.5s ease;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .cards {
+        max-width: 100%;
+        margin-top: 70px;
+    }
+}
