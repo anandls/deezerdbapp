@@ -51,8 +51,8 @@ const ArtistTracks = ({ tracks }) => {
                         return (
                             <div key={track.id} className="track">
                                 <div className="track_index">{index + 1}</div>
-                                <div>{track.title}</div>
-                                <div className="duration">{formatDuration}</div>
+                                <div className="track_title">{track.title}</div>
+                                <div className="track_duration">{formatDuration}</div>
                             </div>
                         );
                     })}

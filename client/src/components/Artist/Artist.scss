@@ -91,7 +91,6 @@ $border-radius: 15px;
 
     .track {
         color: $dark;
-        font-weight: $fw-semibold;
         position: relative;
         display: flex;
         align-items: center;
@@ -101,12 +100,36 @@ $border-radius: 15px;
         border-bottom: 1px solid $white;
 
         .track_index {
+            font-size: $fs-sm;
             margin-right: 14px;
         }
 
-        .duration {
+        .track_title {
+            font-size: $fs-sm;
+            width: 20em;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .track_duration {
+            font-size: $fs-sm;
             position: absolute;
             right: 5px;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .track_title {
+                font-size: $fs-sm;
+                width: 16em;
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+            .track_title {
+                font-size: $fs-sm;
+                width: 11em;
+            }
         }
     }
 }

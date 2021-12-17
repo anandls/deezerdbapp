@@ -1,11 +1,10 @@
 import express, { Application, Request, Response, Router } from "express";
 import * as dotenv from "dotenv";
+import controller from "./Tracks/controllers/search";
+import artistController from "./Tracks/controllers/artist";
 
 const router = Router();
 dotenv.config();
-
-import controller from "./Tracks/controllers/search";
-import artistController from "./Tracks/controllers/artist";
 
 const app: Application = express();
 const port = process.env.PORT || 9001;

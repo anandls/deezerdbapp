@@ -27,7 +27,7 @@ $border-radius: 0.8em;
         padding-top: 4px;
         text-align: center;
         color: #fff;
-        border-radius: 5px 0 0 5px;
+        border-radius: 0 5px 5px 0px;
         font-size: 24px;
         padding: 8px;
     }
@@ -35,9 +35,9 @@ $border-radius: 0.8em;
     .search_input {
         width: 85%;
         border: 3px solid $dark;
-        border-left: none;
+        border-right: none;
         padding: 5px;
-        border-radius: 0 5px 5px 0;
+        border-radius: 5px 0px 0px 5px;
         outline: none;
         font-size: $fs-base;
     }

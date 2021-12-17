@@ -29,8 +29,22 @@ const TracksList = () => {
         getResults("ordinary world");
     }, [searchParam]);
 
+    useEffect(() => {
+        return () => {
+            window.removeEventListener("keydown", handleKeypress);
+        };
+    }, []);
+
     const handleSearch = (value) => {
         setSearchParam(value);
+    };
+
+    const handleKeypress = (event) => {
+        if (event.key === "Enter") {
+            return searchParam !== "" ? getResults(searchParam) : null;
+        } else {
+            return false;
+        }
     };
 
     const handleSubmit = () => {
@@ -41,6 +55,14 @@ const TracksList = () => {
         <>
             <div className="search_header">
                 <div className="search">
+                    <input
+                        className="search_input"
+                        type="text"
+                        onChange={(e) => handleSearch(e.target.value)}
+                        onKeyPress={(e) => handleKeypress(e)}
+                        onClick={(e) => (e.target.value = "")}
+                        placeholder="Search for tracks"
+                    />
                     <span className="search_span">
                         <FontAwesomeIcon
                             icon={faSearch}
@@ -48,13 +70,6 @@ const TracksList = () => {
                             className="search_icon"
                         />
                     </span>
-                    <input
-                        className="search_input"
-                        type="text"
-                        onChange={(e) => handleSearch(e.target.value)}
-                        onClick={(e) => (e.target.value = "")}
-                        placeholder="Search for tracks"
-                    />
                 </div>
             </div>
 
