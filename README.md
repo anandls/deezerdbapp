@@ -50,13 +50,13 @@ The project consists of the structure below, for the main components:
 Please clone the repo to your machine
 
 ### Steps to build and run
-1. `npm install` 
-2. `cd client && npm install && npm run build` 
-3. `cd clientserver && npm install` 
+1. `yarn` 
+2. `cd client && yarn && yarn run build` 
+3. `cd clientserver && yarn` 
 4. `cd ../../` (back to root directory) 
-5. `cd server && npm install` 
+5. `cd server && yarn` 
 6. `cd ..` (back to root directory) 
-7. `npm run serve` to start the server and client app
+7. `yarn run serve` to start the server and client app
 8. Point your browser to `http://localhost:8080` to open the app
 
 .env file is added/not ignored, for convenience
