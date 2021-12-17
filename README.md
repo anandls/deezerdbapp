@@ -1,4 +1,4 @@
-## Frontend & Server app - Consume Deezer music API
+## Frontend + Server app - Consume Deezer music API
 
 - The solution consists of a front end React app (CRA) and a basic Node (with Express) application that fetches data from the Deezer API.
 
